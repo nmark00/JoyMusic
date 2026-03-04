@@ -229,9 +229,7 @@
               </a>
             </div>
           </div>
-          <form class="contact-form animate-on-scroll" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
-            <p class="hidden"><input name="bot-field" tabindex="-1" autocomplete="off"></p>
+          <form class="contact-form animate-on-scroll" id="contact-form">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
@@ -245,6 +243,10 @@
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="form-success" id="form-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p>Message sent! We'll get back to you soon.</p>
+            </div>
           </form>
         </div>
       </div>
@@ -280,6 +282,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

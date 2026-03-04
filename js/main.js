@@ -44,6 +44,25 @@
     }
   });
 
+  // --- Fake contact form ---
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      contactForm.classList.add('submitted');
+    });
+  }
+
+  // --- Donation amount selection ---
+  document.querySelectorAll('.impact-item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      document.querySelectorAll('.impact-item').forEach(function (el) {
+        el.classList.remove('selected');
+      });
+      item.classList.add('selected');
+    });
+  });
+
   // --- Scroll-triggered animations ---
   var animatedElements = document.querySelectorAll('.animate-on-scroll');
 

@@ -602,11 +602,18 @@ button {
   border-radius: 16px;
   background: var(--color-off-white);
   border: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .impact-item:hover {
   border-color: var(--color-primary-light);
+}
+
+.impact-item.selected {
+  border-color: var(--color-primary);
+  background-color: rgba(232, 67, 147, 0.08);
+  transform: translateY(-4px);
 }
 
 .impact-amount {
@@ -740,6 +747,36 @@ button {
 
 .form-group textarea {
   resize: vertical;
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(232, 67, 147, 0.08);
+  border-radius: 12px;
+  color: var(--color-primary-dark);
+}
+
+.form-success svg {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 0.75rem;
+  color: var(--color-primary);
+}
+
+.form-success p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contact-form.submitted .form-group,
+.contact-form.submitted .btn {
+  display: none;
+}
+
+.contact-form.submitted .form-success {
+  display: block;
 }
 
 /* --- 12. Footer --- */
